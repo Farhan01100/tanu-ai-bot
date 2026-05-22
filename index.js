@@ -230,7 +230,9 @@ async function sendLongMessage(ctx, text) {
       i + MAX_TELEGRAM_MESSAGE
     );
 
-    await ctx.reply(chunk);
+    await ctx.reply(chunk, {
+  parse_mode: "HTML",
+});
   }
 }
 
